@@ -6,9 +6,12 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [
+    //imported GraphqlModule 
     GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql'
     }),
+
+    //imported TypeOrmModule for database connection
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
