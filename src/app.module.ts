@@ -24,6 +24,7 @@ import { CustomerModule } from './customer/customer.module';
       synchronize: false,
     }),
 
+    //imported CustomerModule
     CustomerModule,
   ],
   controllers: [AppController],
