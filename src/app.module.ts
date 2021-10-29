@@ -3,6 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { CustomerModule } from './customer/customer.module';
 
 @Module({
   imports: [
@@ -22,6 +23,8 @@ import { AppService } from './app.service';
       entities: ['dist/**/*.model.js'],
       synchronize: false,
     }),
+
+    CustomerModule,
   ],
   controllers: [AppController],
   providers: [AppService],
